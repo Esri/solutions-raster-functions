@@ -1,48 +1,23 @@
-# solutions-raster-functions
+# Suitability Functions
 
-Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.
+These functions help determine areas most suitable for activities.
 
-## Features
-
-* The [**suitability**](./suitability/README.md) folder contains:
-  * Military Aspects of Weather functions
+![Image of repository-template](suitability_screenshot.png)
 
 ## Sections
 
-* [Requirements](#requirements)
-* [Instructions](#instructions)
-* [Resources](#resources)
-* [Issues](#issues)
-* [Contributing](#contributing)
-* [Licensing](#licensing)
+* [Military Aspects Of Weather functions](#military-aspects-of-weather)
 
-## Requirements
 
-* ArcGIS Pro 1.0 or higher
+## Military Aspects Of Weather functions
 
-## Instructions
+<description>
+<link to template>
 
-### General Help
+* function.rft.xml
+* function.rft.xml
+* function.rft.xml
 
-* [New to Github? Get started here.](http://htmlpreview.github.com/?https://github.com/Esri/esri.github.com/blob/master/help/esri-getting-to-know-github.html)
-
-### Getting Started
-
-* Building
-   
-* Running
-
-* Testing
-
-* Deploying
-
-### Services
-
-* List Dependent Services
-
-## Resources
-
-* Learn more about TBD
 
 ## Issues
 
@@ -54,7 +29,7 @@ Esri welcomes contributions from anyone and everyone. Please see our [guidelines
 
 ## Licensing
 
-Copyright 2014 Esri
+Copyright 2015 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -71,6 +46,5 @@ limitations under the License.
 A copy of the license is available in the repository's
 [license.txt](license.txt) file.
 
-[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military)
-[](Esri Language: Python)
-
+[](Esri Tags: ArcGIS Defense and Intelligence Military Environment Planning Analysis Emergency Management ArcGISSolutions)
+[](Esri Language: XML, Python)
