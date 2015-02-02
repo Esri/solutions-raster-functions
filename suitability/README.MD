@@ -14,9 +14,40 @@ These functions help determine areas most suitable for activities.
 <description>
 <link to template>
 
-* function.rft.xml
-* function.rft.xml
-* function.rft.xml
+* DeriveHeatIndex.rft.xml
+* DeriveWindChill_non_uv.rft.xml
+* DeriveWindChill_uv.rft.xml
+* ExtractCloudCeiling.rft.xml
+* ExtractCloudCover.rft.xml
+* ExtractGust.rft.xml
+* ExtractPrecipitationRate.rft.xml
+* ExtractRelativeHumidity.rft.xml
+* ExtractTemperature.rft.xml
+* ExtractVisibility.rft.xml
+* ExtractWindDirection.rft.xml
+* ExtractWindSpeed.rft.xml
+* OpImpact_Air_Defence_Cloud_Ceiling.rft.xml
+* OpImpact_Air_Defence_Temperature.rft.xml
+* OpImpact_Air_Defence_Visibility.rft.xml
+* OpImpact_Air_Defence_Wind_Speed.rft.xml
+* OpImpact_Artillery_Cloud_Ceiling.rft.xml
+* OpImpact_Artillery_Visibility.rft.xml
+* OpImpact_Artillery_Wind_Speed.rft.xml
+* OpImpact_Bridge_Crossing_Wind_Speed.rft.xml
+* OpImpact_Cross_Country_Manoeuveres_CloudCeiling.rft.xml
+* OpImpact_Cross_Country_Manoeuvres_Snow_Depth.rft.xml
+* OpImpact_Cross_Country_Manoeuvres_Temperature.rft.xml
+* OpImpact_Cross_Country_Manoeuvres_Visibility.rft.xml
+* OpImpact_Cross_Country_Manoeuvres_Wind_Speed.rft.xml
+* OpImpact_Parachute_CloudCeiling.rft.xml
+* OpImpact_Parachute_WindSpeed.rft.xml
+* OpImpact_Personnel_Heat_Index.rft.xml
+* OpImpact_Personnel_Temp.rft.xml
+* OpImpact_UAV_Cloud_Ceiling.rft.xml
+* OpImpact_UAV_Visibility.rft.xml
+* OpImpact_UAV_Wind_Speed.rft.xml
+* Tactical_Airlift_Cloud_Ceiling.rft.xml
+* Tactical_Airlift_Visibility.rft.xml
 
 
 ## Issues
