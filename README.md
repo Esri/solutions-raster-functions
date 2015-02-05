@@ -2,6 +2,8 @@
 
 Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.
 
+![Raster functions graphic](GenericFunctionsGraphic.png)
+
 ## Features
 
 * The [**suitability**](./suitability/README.md) folder contains:
@@ -25,28 +27,23 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ### General Help
 
 * [New to Github? Get started here.](http://htmlpreview.github.com/?https://github.com/Esri/esri.github.com/blob/master/help/esri-getting-to-know-github.html)
+* [Getting started with image and raster processing](http://pro.arcgis.com/en/pro-app/help/data/imagery/get-started-with-image-and-raster-processing.htm)
+* [Apply functions to a dataset](http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
 
 ### Getting Started
 
-* Building
-   
-* Running
-
-* Testing
-
-* Deploying
-
-### Services
-
-* List Dependent Services
+* Download the solutions-raster-functions repo to your local computer.
+* With ArcGIS Pro:
+	* Apply raster functions to raster datasets using [Raster Functions pane](https://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm).
+	* Apply raster functions to mosaic datasets with  [Set Mosaic Dataset Properties](http://pro.arcgis.com/en/pro-app/tool-reference/data-management/set-mosaic-dataset-properties.htm).
 
 ## Resources
 
-* Learn more about TBD
+* [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/community/)
 
 ## Issues
 
-Find a bug or want to request a new feature?  Please let us know by submitting an issue.
+Find a bug or want to request a new function?  Please let us know by submitting an issue.
 
 ## Contributing
 
