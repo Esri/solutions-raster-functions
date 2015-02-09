@@ -6,7 +6,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 ## Features
 
-* The [**suitability**](./suitability/README.md) folder contains:
+* The [**suitability**](./suitability/README.MD) folder contains:
   * Military Aspects of Weather functions
 
 ## Sections
