@@ -20,6 +20,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 ## Requirements
 
+* ArcGIS Desktop 10.3
 * ArcGIS Pro 1.0 or higher
 
 ## Instructions
@@ -33,9 +34,13 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ### Getting Started
 
 * Download the solutions-raster-functions repo to your local computer.
+* These raster functions are designed to be work with mosaic datasets only and only with NAM and GFS data in the OpenDAP format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.
+* They have been built with NAM CONUS (12KM) and GFS 0.50 Degree both downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
+* With ArcGIS Desktop 10.3
+	* Add the raster functions to the mosaic dataset as processing templates.
+	* Add mosaic dataset to project and then apply relevant processing template.
 * With ArcGIS Pro:
-	* Apply raster functions to raster datasets using [Raster Functions pane](https://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm).
-	* Apply raster functions to mosaic datasets with  [Set Mosaic Dataset Properties](http://pro.arcgis.com/en/pro-app/tool-reference/data-management/set-mosaic-dataset-properties.htm).
+	* Presently these raster functions do not work within ArcGIS Pro.
 
 ## Resources
 
