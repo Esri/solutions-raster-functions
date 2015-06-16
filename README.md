@@ -21,7 +21,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ## Requirements
 
 * ArcGIS Desktop 10.3
-* ArcGIS Pro 1.0 or higher
+* Pywin build 219 or later or similar ide.
 
 ## Instructions
 
@@ -34,13 +34,18 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ### Getting Started
 
 * Download the solutions-raster-functions repo to your local computer.
-* These raster functions are designed to be work with mosaic datasets only and only with NAM and GFS data in the OpenDAP format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.
-* They have been built with NAM CONUS (12KM) and GFS 0.50 Degree both downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
+* These raster functions are designed to be work with mosaic datasets only and only with NAM data in the OpenDAP format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.
+* Information on building raster functions can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+* They have been built with NAM CONUS (12KM) downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
+* All raster functions and scripts should be copied to a folder on a local drive on your computer.
+* For the raster functions that use Python scripts such as DeriveWindChillUV.rft.xml the location of the Python script will have to be changed.  This can be done in 2 ways
+	* It can be edited directly within xml by finding the .py file and changing the location.
+	* It can be edited within ArcGIS through the Raster Function editor and double clicking on Python module name.
 * With ArcGIS Desktop 10.3
 	* Add the raster functions to the mosaic dataset as processing templates.
 	* Add mosaic dataset to project and then apply relevant processing template.
 * With ArcGIS Pro:
-	* Presently these raster functions do not work within ArcGIS Pro.
+	* Presently these raster functions do not work within ArcGIS Pro but this is being worked on.
 
 ## Resources
 
@@ -73,6 +78,6 @@ limitations under the License.
 A copy of the license is available in the repository's
 [license.txt](license.txt) file.
 
-[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military)
+[](Esri Tags: ArcGIS Defense Intelligence Military ArcGISSolutions )
 [](Esri Language: Python)
 

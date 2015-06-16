@@ -1,6 +1,26 @@
-# Name: WindSpeedFromUV
+##Copyright 2015 Esri
+##
+##Licensed under the Apache License, Version 2.0 (the "License");
+##you may not use this file except in compliance with the License.
+##You may obtain a copy of the License at
+##
+##   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+##
+##Unless required by applicable law or agreed to in writing, software
+##distributed under the License is distributed on an "AS IS" BASIS,
+##WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+##See the License for the specific language governing permissions and
+##limitations under the License.
+##
+##A copy of the license is available in the repository's
+##[license.txt](license.txt) file.
+##
+##[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military)
+##[](Esri Language: Python)
 
-# Description: Python raster function that extracts wind speed from u and v components of wind.
+# Name: WindDirectionFromUV
+
+# Description: Python raster function to extract wind direction from u and v components of wind.
 
 # Date Edited: 24/03/2015
 
@@ -9,11 +29,11 @@
 import numpy as np
 
 
-class WindSpeedFromUV():
+class WindDirectionFromUV():
 
     def __init__(self):
-        self.name = "Wind Speed Function"
-        self.description = "This function computes wind Speed given u/v components of wind."
+        self.name = "Wind Direction Function"
+        self.description = "This function computes Wind Direction given u/v components of wind."
 
 
     def getParameterInfo(self):
@@ -24,7 +44,7 @@ class WindSpeedFromUV():
                 'value': None,
                 'required': True,
                 'displayName': "U component of wind Raster",
-                'description': "A single-band raster where pixel values represent the u component of wind in miles per hour."
+                'description': "A single-band raster where pixel values represent the u component of wind in metres per second."
             },
             {
                 'name': 'v',
@@ -32,7 +52,7 @@ class WindSpeedFromUV():
                 'value': None,
                 'required': True,
                 'displayName': "V component of wind Raster",
-                'description': "A single-band raster where pixel values represent the v component of wind in miles per hour."
+                'description': "A single-band raster where pixel values represent the v component of wind in metres per second."
             },
         ]
 
@@ -57,7 +77,7 @@ class WindSpeedFromUV():
         u = np.array(pixelBlocks['u_pixels'], dtype='f4')        
         v = np.array(pixelBlocks['v_pixels'], dtype='f4')
 
-        outBlock = np.sqrt(np.square(u) + np.square(v))
+        outBlock = np.degrees (np.arctan2(u, v)) + 180
         pixelBlocks['output_pixels'] = outBlock.astype(props['pixelType'])
         return pixelBlocks
 

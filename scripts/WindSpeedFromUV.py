@@ -1,6 +1,26 @@
-# Name: GustWindSpeedFromUV
+##Copyright 2015 Esri
+##
+##Licensed under the Apache License, Version 2.0 (the "License");
+##you may not use this file except in compliance with the License.
+##You may obtain a copy of the License at
+##
+##   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+##
+##Unless required by applicable law or agreed to in writing, software
+##distributed under the License is distributed on an "AS IS" BASIS,
+##WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+##See the License for the specific language governing permissions and
+##limitations under the License.
+##
+##A copy of the license is available in the repository's
+##[license.txt](license.txt) file.
+##
+##[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military)
+##[](Esri Language: Python)
 
-# Description: Python raster function to extract gust windspeed from U an dV components of wind.
+# Name: WindSpeedFromUV
+
+# Description: Python raster function that extracts wind speed from u and v components of wind.
 
 # Date Edited: 24/03/2015
 
@@ -9,11 +29,11 @@
 import numpy as np
 
 
-class GustWindSpeedFromUV():
+class WindSpeedFromUV():
 
     def __init__(self):
-        self.name = "Gust Wind Speed Function"
-        self.description = "This function computes Gust Wind Speed given u/v components of wind."
+        self.name = "Wind Speed Function"
+        self.description = "This function computes wind Speed given u/v components of wind."
 
 
     def getParameterInfo(self):
@@ -23,7 +43,7 @@ class GustWindSpeedFromUV():
                 'dataType': 'raster',
                 'value': None,
                 'required': True,
-                'displayName': "U component of gust wind raster",
+                'displayName': "U component of wind Raster",
                 'description': "A single-band raster where pixel values represent the u component of wind in miles per hour."
             },
             {
@@ -31,7 +51,7 @@ class GustWindSpeedFromUV():
                 'dataType': 'raster',
                 'value': None,
                 'required': True,
-                'displayName': "V component of gust wind raster",
+                'displayName': "V component of wind Raster",
                 'description': "A single-band raster where pixel values represent the v component of wind in miles per hour."
             },
         ]
