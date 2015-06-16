@@ -1,6 +1,6 @@
 <RasterFunctionTemplate xsi:type='typens:RasterFunctionTemplate' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'>
-	<Name>ExtractGust</Name>
-	<Description>Extracts wind gust.</Description>
+	<Name>DeriveWindChillUV</Name>
+	<Description>Derives windchill using a temperature variable and u and v components of wind.</Description>
 	<Function xsi:type='typens:StatisticsHistogramFunction'>
 		<Name>Statistics and Histogram Function</Name>
 		<Description>Associates/adds statistics and histograms.</Description>
@@ -14,45 +14,53 @@
 		</Names>
 		<Values xsi:type='typens:ArrayOfAnyType'>
 			<AnyType xsi:type='typens:RasterFunctionVariable'>
-				<Name>Raster_2015114_115139_876</Name>
+				<Name>Raster_2015115_115030_696</Name>
 				<Description/>
 				<Value xsi:type='typens:RasterFunctionTemplate'>
 					<Name>Raster Function Template</Name>
 					<Description>A raster function template.</Description>
-					<Function xsi:type='typens:UnitConversionFunction'>
-						<Name>Unit Conversion Function</Name>
-						<Description>Convert values from one unit to another unit.</Description>
+					<Function xsi:type='typens:PythonAdapterFunction'>
+						<Name>Wind Chill Function</Name>
+						<Description>This function computes wind chill on the Fahrenheit scale given u/v components of wind and a temparature variable.</Description>
 						<PixelType>UNKNOWN</PixelType>
 					</Function>
-					<Arguments xsi:type='typens:UnitConversionFunctionArguments'>
+					<Arguments xsi:type='typens:PythonAdapterFunctionArguments'>
 						<Names xsi:type='typens:ArrayOfString'>
-							<String>Raster</String>
-							<String>FromUnit</String>
-							<String>ToUnit</String>
-							<String>__Properties</String>
+							<String>PythonModule</String>
+							<String>ClassName</String>
+							<String>tmpsfc</String>
+							<String>u</String>
+							<String>v</String>
+							<String>tmpunits</String>
+							<String>windparm</String>
+							<String>windunits</String>
+							<String>units</String>
 						</Names>
 						<Values xsi:type='typens:ArrayOfAnyType'>
+							<AnyType xsi:type='xs:string'>..\Scripts\WindchillUV.py</AnyType>
+							<AnyType xsi:type='xs:string'>WindchillUV</AnyType>
 							<AnyType xsi:type='typens:RasterFunctionVariable'>
-								<Name>Raster</Name>
+								<Name>tmpsfc</Name>
 								<Description/>
 								<Value/>
 								<IsDataset>true</IsDataset>
 							</AnyType>
 							<AnyType xsi:type='typens:RasterFunctionVariable'>
-								<Name>FromUnit_2015114_115122_391</Name>
+								<Name>ugrd10m</Name>
 								<Description/>
-								<Value xsi:type='xs:int'>100</Value>
-								<IsDataset>false</IsDataset>
+								<Value/>
+								<IsDataset>true</IsDataset>
 							</AnyType>
 							<AnyType xsi:type='typens:RasterFunctionVariable'>
-								<Name>ToUnit_2015114_115122_391</Name>
+								<Name>vgrd10m</Name>
 								<Description/>
-								<Value xsi:type='xs:int'>104</Value>
-								<IsDataset>false</IsDataset>
+								<Value/>
+								<IsDataset>true</IsDataset>
 							</AnyType>
-							<AnyType xsi:type='typens:PropertySet'>
-								<PropertyArray xsi:type='typens:ArrayOfPropertySetProperty'/>
-							</AnyType>
+							<AnyType xsi:type='xs:string'>Kelvin</AnyType>
+							<AnyType xsi:type='xs:string'>uv</AnyType>
+							<AnyType xsi:type='xs:string'>m/s</AnyType>
+							<AnyType xsi:type='xs:string'>Kelvin</AnyType>
 						</Values>
 					</Arguments>
 					<Help/>
@@ -65,12 +73,12 @@
 				<IsDataset>true</IsDataset>
 			</AnyType>
 			<AnyType xsi:type='typens:RasterFunctionVariable'>
-				<Name>Statistics_2015114_115139_876</Name>
+				<Name>Statistics_2015115_115030_696</Name>
 				<Description/>
 				<Value xsi:type='typens:ArrayOfRasterStatistics'>
 					<RasterStatistics xsi:type='typens:RasterStatistics'>
-						<Min>0</Min>
-						<Max>150</Max>
+						<Min>-100</Min>
+						<Max>200</Max>
 						<Mean>0</Mean>
 						<StandardDeviation>0</StandardDeviation>
 						<Median>0</Median>
@@ -84,17 +92,17 @@
 				<IsDataset>false</IsDataset>
 			</AnyType>
 			<AnyType xsi:type='typens:RasterFunctionVariable'>
-				<Name>Histograms_2015114_115139_876</Name>
+				<Name>Histograms_2015115_115030_696</Name>
 				<Description/>
 				<Value xsi:nil='true'/>
 				<IsDataset>false</IsDataset>
 			</AnyType>
 		</Values>
 	</Arguments>
-	<Help>User to specify variable within the Raster Function. </Help>
-	<Type>1</Type>
+	<Help>Derives windchill using a temperature variable and wind data in the u/v format. User needs to identify variable names within the python script as well as in the raster function.  Raster function is set to take temperature in degrees Kelvin and convert this to Fahrenheit  which is required by the calculation.  Wind Speed needs to be in Metres per second.  If the users data is not in the correct format (Kelvin / m\s) then edits to the Python will have to be made to do the conversion.</Help>
+	<Type>2</Type>
 	<Thumbnail xsi:type='xs:string'/>
-	<Definition>Tag = &apos;gustsfc&apos;</Definition>
-	<Group/>
-	<Tag/>
+	<Definition/>
+	<Group>GroupName</Group>
+	<Tag>Tag</Tag>
 </RasterFunctionTemplate>

@@ -1,6 +1,6 @@
 <RasterFunctionTemplate xsi:type='typens:RasterFunctionTemplate' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'>
-	<Name>ExtractCloudCover</Name>
-	<Description>Extracts cloud cover as a percentage from a specified variable.</Description>
+	<Name>ExtractWindDirectionNonUV</Name>
+	<Description>Extracts Wind Direction from a suitable variable</Description>
 	<Function xsi:type='typens:StatisticsHistogramFunction'>
 		<Name>Statistics and Histogram Function</Name>
 		<Description>Associates/adds statistics and histograms.</Description>
@@ -70,10 +70,10 @@
 			</AnyType>
 		</Values>
 	</Arguments>
-	<Help>User to identify the variable that identifies cloud cover within the raster function.</Help>
+	<Help>User to identify variable within the raster function</Help>
 	<Type>1</Type>
 	<Thumbnail xsi:type='xs:string'/>
-	<Definition>Tag = &apos;tcdcclm&apos;</Definition>
+	<Definition>Tag = &apos;WindDirection&apos;</Definition>
 	<Group/>
 	<Tag/>
 </RasterFunctionTemplate>

@@ -1,7 +1,15 @@
+# Name: HeatIndex
+
+# Description: Python raster function to calculate Heat Index 
+
+# Date Edited: 24/03/2015
+
+#----------------------------------------------------------------------------------------------------------------------
+
 import numpy as np
 
 
-class HeatIndex2():
+class HeatIndex():
 
     def __init__(self):
         self.name = "Heat Index Function"
@@ -13,29 +21,29 @@ class HeatIndex2():
     def getParameterInfo(self):
         return [
             {
-                'name': 'tmpsfc',
+                'name': 'tmpsfc', #To be changed by user to the name of their variable for temperature
                 'dataType': 'raster',
                 'value': None,
                 'required': True,
                 'displayName': "Temperature Raster",
-                'description': "A single-band raster where pixel values represent ambient air temperature in Fahrenheit."
+                'description': "A single-band raster where pixel values represent ambient air temperature in Fahrenheit." # to be changed by user.
             },
             {
                 'name': 'units',
                 'dataType': 'string',
-                'value': 'Kelvin',
+                'value': 'Kelvin', # To be changed by the user to match whatever there input parameter units are.
                 'required': True,
                 'domain': ('Celsius', 'Fahrenheit', 'Kelvin'),
                 'displayName': "Temperature Measured In",
                 'description': "The unit of measurement associated with the temperature raster."
             },
             {
-                'name': 'rh2m',
+                'name': 'rh2m', # To be changed by user to the name of their variable for relative humidity
                 'dataType': 'raster',
                 'value': None,
                 'required': True,
                 'displayName': "Relative Humidity Raster",
-                'description': "A single-band raster where pixel values represent relative humidity as a percentage value between 0 and 100."
+                'description': "A single-band raster where pixel values represent relative humidity as a percentage value between 0 and 100." # to be changed by user
             },
         ]
 

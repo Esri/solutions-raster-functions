@@ -1,3 +1,11 @@
+# Name: GustWindSpeedFromUV
+
+# Description: Python raster function to extract gust windspeed from U an dV components of wind.
+
+# Date Edited: 24/03/2015
+
+#----------------------------------------------------------------------------------------------------------------------
+
 import numpy as np
 
 

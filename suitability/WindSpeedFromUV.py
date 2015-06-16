@@ -1,3 +1,11 @@
+# Name: WindSpeedFromUV
+
+# Description: Python raster function that extracts wind speed from u and v components of wind.
+
+# Date Edited: 24/03/2015
+
+#----------------------------------------------------------------------------------------------------------------------
+
 import numpy as np
 
 

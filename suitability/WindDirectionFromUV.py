@@ -1,3 +1,11 @@
+# Name: WindDirectionFromUV
+
+# Description: Python raster function to extract wind direction from u and v components of wind.
+
+# Date Edited: 24/03/2015
+
+#----------------------------------------------------------------------------------------------------------------------
+
 import numpy as np
 
 
@@ -16,7 +24,7 @@ class WindDirectionFromUV():
                 'value': None,
                 'required': True,
                 'displayName': "U component of wind Raster",
-                'description': "A single-band raster where pixel values represent the u component of wind in miles per hour."
+                'description': "A single-band raster where pixel values represent the u component of wind in metres per second."
             },
             {
                 'name': 'v',
@@ -24,7 +32,7 @@ class WindDirectionFromUV():
                 'value': None,
                 'required': True,
                 'displayName': "V component of wind Raster",
-                'description': "A single-band raster where pixel values represent the v component of wind in miles per hour."
+                'description': "A single-band raster where pixel values represent the v component of wind in metres per second."
             },
         ]
 
