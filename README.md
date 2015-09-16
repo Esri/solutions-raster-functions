@@ -58,9 +58,6 @@ WindchillUV.py	 									Python script used by the DeriveWindChilluv raster func
 WindDirectionFromUV.py	 							Python script used by the WindDirectionFromUV raster function.
 WindSpeedFromUV.py	 								Python script used by the OpImpact wind speed raster functions.
 
-  
-  
-  
 
 ## Sections
 
@@ -75,7 +72,7 @@ WindSpeedFromUV.py	 								Python script used by the OpImpact wind speed raster
 
 * ArcGIS Desktop 10.3 or later
 * ArcGIS Pro v1 or later
-* Pywin build 219 or later or similar ide.
+* Pywin build 219 or later or similar ide. (Optional)
 
 ## Instructions
 
@@ -84,6 +81,7 @@ WindSpeedFromUV.py	 								Python script used by the OpImpact wind speed raster
 * [New to Github? Get started here.](http://htmlpreview.github.com/?https://github.com/Esri/esri.github.com/blob/master/help/esri-getting-to-know-github.html)
 * [Getting started with image and raster processing](http://pro.arcgis.com/en/pro-app/help/data/imagery/get-started-with-image-and-raster-processing.htm)
 * [Apply functions to a dataset](http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
+
 
 ### Getting Started
 
