@@ -84,8 +84,6 @@ class HeatIndex():
         else:
             t = t
 
-##        if self.doConversion:
-##            t = (9.0/5.0 * t) + 32.0
 
         tr = t * r
         rr = r * r
