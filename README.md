@@ -20,7 +20,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 ## Requirements
 
-* ArcGIS Desktop 10.3
+* ArcGIS Desktop 10.3 or later or ArcGIS Pro v1 or later
 * Pywin build 219 or later or similar ide.
 
 ## Instructions
@@ -45,7 +45,10 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 	* Add the raster functions to the mosaic dataset as processing templates.
 	* Add mosaic dataset to project and then apply relevant processing template.
 * With ArcGIS Pro:
-	* Presently these raster functions do not work within ArcGIS Pro but this is being worked on.
+	* The Mosaic dataset needs to be within a database within the databases section.
+	* The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
+	* Under the Image Processing the tab the Raster Functions should be added as Processing templates one by one.
+	* To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
 
 ## Resources
 

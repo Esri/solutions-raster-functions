@@ -159,7 +159,7 @@
 																							</ConnectionProperties>
 																						</WorkspaceName>
 																						<Name>cccontstant</Name>
-																						<NameString>RASTER: Workspace = C:\MAOW\Tools\; RasterDataset = cccontstant;</NameString>
+																						<NameString>RASTER: Workspace = ..\Tools\; RasterDataset = cccontstant;</NameString>
 																						<Category>Raster Dataset</Category>
 																					</Argument>
 																				</Value>
