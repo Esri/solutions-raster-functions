@@ -54,6 +54,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 	Python Scripts included and what they do
 
 	All of the scripts need to be checked by the user especially if it is intended to use them with different data as parameters may need to be changed to suit.
+	
 |Python Script Name | What script does |
 |-----|-----| 
 | GustWindSpeedFromUV.py | Python script used by the ExtractGust raster function which uses U and V components of wind. |
