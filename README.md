@@ -1,13 +1,13 @@
 # solutions-raster-functions
 
-Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.
+Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for use with NAM CONUS 12km data in the OpenDAP format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. 
 
 ![Raster functions graphic](GenericFunctionsGraphic.png)
 
 ## Features
 
-* The [**suitability**](./suitability/README.MD) folder contains:
-  * Military Aspects of Weather functions
+* What is included in this repo is:
+  * Military Aspects of Weather Raster Functions
   
   Raster Functions included and what they do
   
@@ -47,12 +47,15 @@ OpImpactUAVWindSpeed.rft.xml						Raster function to display the operational imp
 TacticalAirliftCloudCeiling.rft.xml					Raster function to display the impact of cloud ceiling values on tactical airlifts.
 TacticalAirliftVisibility.rft.xml					Raster function to display the impact of visibility values on tactical airlifts.
 
-Python Scripts included and what they do
+  * Python Scripts for use within the Raster Functions
+	
+	Python Scripts included and what they do
 
-All of the scripts need to be checked by the user especially if it is intended to use them with different data as parameters may need to be changed to suit.
+	All of the scripts need to be checked by the user especially if it is intended to use them with different data as parameters may need to be changed to suit.
   
 GustWindSpeedFromUV.py	 							Python script used by the ExtractGust raster function which uses U and V components of wind.
 HeatIndex.py	 									Python script used by the DeriveHeatIndex raster function.
+NAMDownload.py										Python script that automates the download of the most up to date NAM data.
 WindChillnonuv.py	 								Python script used by the DeriveWindChillnonuv raster function for data that does not contain the U and V components of wind.
 WindchillUV.py	 									Python script used by the DeriveWindChilluv raster function for data that does contain the U and V components of wind.
 WindDirectionFromUV.py	 							Python script used by the WindDirectionFromUV raster function.
@@ -115,6 +118,8 @@ Find a bug or want to request a new function?  Please let us know by submitting 
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
+
+For information on licensing around the meteorological data used please see - http://www.weather.gov/disclaimer
 
 Copyright 2015 Esri
 
