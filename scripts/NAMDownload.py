@@ -2,7 +2,7 @@
 
 # Description: Downloads the most up to date data from the NOAA site by getting the present date.
 
-# Date Edited: 26/03/2015
+# Date Edited: 17/09/2015
 
 
 #Import modules
@@ -99,11 +99,6 @@ def download00():
     arcpy.AddRastersToMosaicDataset_management(output2, Raster_Type, Input_Data2, "UPDATE_CELL_SIZES", "UPDATE_BOUNDARY", "NO_OVERVIEWS", "", "0", "1500", "", "*.nc", "SUBFOLDERS", "ALLOW_DUPLICATES", "NO_PYRAMIDS", "NO_STATISTICS", "NO_THUMBNAILS", "", "NO_FORCE_SPATIAL_REFERENCE")
 
     print ("Rasters added to Mosaic Datasets - "+filename)
-
-    # mxd = arcpy.mapping.MapDocument(topFolder + os.sep + "\mxd\MAOWTemplate.mxd")
-    # arcpy.RefreshTOC()
-
-    # print("Refreshed Map Doc") 
 
 #__________________________________________________________________________________________________________________________________________________
 
@@ -343,18 +338,17 @@ def download18():
 
 
 now_time = time(int(datetime.utcnow().strftime("%H")), int(datetime.utcnow().strftime("%M")), int(datetime.utcnow().strftime("%S")))
-#now_time = time(8,10,45)
 
 
 if now_time >= time(02,50,00) and now_time < time(8,50,00):
     download00()
-    #print "0000 to 0600"
+
 elif now_time >= time(8,50,00) and now_time < time(14,50,00):
     download06()
-    #print "0600 to 1200"
+ 
 elif now_time >= time(14,50,00) and now_time < time(21,00,00):
     download12()
-    #print "1200 to 1800"
+
 elif ((now_time >= time(21,00,00) and now_time <= time(23,59,59)) or (now_time >= time(00,00,00) and now_time <= time(02,49,59))):
     download18()
-    #print "1800 to 0000"
+

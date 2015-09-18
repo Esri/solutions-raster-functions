@@ -2,7 +2,7 @@
 
 # Description: Python raster function to calculate Heat Index 
 
-# Date Edited: 24/03/2015
+# Date Edited: 17/09/2015
 
 #----------------------------------------------------------------------------------------------------------------------
 
@@ -14,7 +14,6 @@ class HeatIndex():
     def __init__(self):
         self.name = "Heat Index Function"
         self.description = "This function combines ambient air temperature and relative humidity to return apparent temperature in degrees Fahrenheit."
-        #self.doConversion = False
         self.tempunits = "Fahrenheit"
 
 
@@ -69,7 +68,6 @@ class HeatIndex():
             self.tempunits = 'kelvin'
                            
 
-        #self.doConversion = bool(kwargs.get('units', 'Fahrenheit').lower() == 'Celsius')
         return kwargs
 
     def updatePixels(self, tlc, shape, props, **pixelBlocks):

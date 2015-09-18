@@ -1,6 +1,6 @@
 # solutions-raster-functions
 
-Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for use with NAM CONUS 12km data in the OpenDAP format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. 
+Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for use with NAM CONUS 12km data in the OpenDAP format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Examples would be extracting Temperature or Relative Humidity.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. The user can then by inputting parameters make predictions as to the impact these weather conditions may have on Military Operations.  These parameters can be changed to suit not just Military operations but any activity that may be influenced by the weather.
 
 ![Raster functions graphic](GenericFunctionsGraphic.png)
 
@@ -10,56 +10,79 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
   * Military Aspects of Weather Raster Functions
   
   Raster Functions included and what they do
-  
-DeriveHeatIndex.rft.xml								Raster function to calculate Heat Index using Relative Humidity and Temperature.
-DeriveWindChillnonuv.rft.xml						Raster function to display windchill but not using u and v components of wind. Uses a single variable for wind speed and single variable for temperature .
-DeriveWindChilluv.rft.xml							Raster function to display windchill using u and v components of wind. Uses a single variable for temperature.
-ExtractCloudCeiling.rft.xml							Raster function to display cloud ceiling height from data.
-ExtractCloudCover.rft.xml							Raster function to display percentage cloud cover from data.
-ExtractGust.rft.xml									Raster function to display wind gust derived from u and v values of wind.
-ExtractPrecipitationRate.rft.xml					Raster functions to display precipitation rate from data.
-ExtractRelativeHumidity.rft.xml						Raster function to display relative humidity from data.
-ExtractTemperature.rft.xml							Raster function to display temperature readings from data.
-ExtractTemperatureDegC.rft.xml						Raster function to extract temperature from data and change from Degrees Kelvin to Degrees Centigrade.
-ExtractVisibility.rft.xml							Raster function to display visibility values from data.
-ExtractWindDirection.rft.xml						Raster function to display wind direction using u and v components of wind.
-ExtractWindDirectionNonUV.rft.xml					Raster function display wind direction but not using u and v components of wind. Uses a single variable for wind speed.
-OpImpactAirDefenseCloudCeiling.rft.xml				Raster function to display the operational impact of cloud ceiling values on air defense operations.
-OpImpactAirDefenseTemperature.rft.xml				Raster function to display the operational impact of temperature values on air defense operations.
-OpImpactAirDefenseVisibility.rft.xml				Raster function to display the operational impact of visibility values on air defense operations.
-OpImpactAirDefenseWindSpeed.rft.xml					Raster function to display the operational impact of wind speed derived from u and v values on air defense operations.
-OpImpactArtilleryCloudCeiling.rft.xml				Raster function to display the operational impact of cloud ceiling values on artillery operations.
-OpImpactArtilleryVisibility.rft.xml					Raster function to display the operational impact of visibility values on artillery operations.
-OpImpactArtilleryWindSpeed.rft.xml					Raster function to display the operational impact of wind speed derived from u and v values on artillery operations.
-OpImpactBridgeCrossingWindSpeed.rft.xml				Raster function to display the operational impact of wind speed derived from u and v values on bridge crossing.
-OpImpactCrossCountryManoevresCloudCeiling.rft.xml	Raster function to display the operational impact of cloud ceiling values on cross country manoeuvres.
-OpImpactCrossCountryManoevresSnowDepth.rft.xml		Raster function to display the operational impact of snow depth values on cross country manoeuvres.
-OpImpactCrossCountryManoevresTemperature.rft.xml	Raster function to display the operational impact of temperature values on cross country manoeuvres.
-OpImpactCrossCountryManoevresVisibility.rft.xml		Raster function to display the operational impact of visibility values on cross country manoeuvres.
-OpImpactCrossCountryManoevresWindSpeed.rft.xml		Raster function to display the operational impact of wind speed values derived from u and v values on cross country manoeuvres.
-OpImpactParachuteCloudCeiling.rft.xml				Raster function to display the operational impact of cloud ceiling values on parachute operations.
-OpImpactParachuteWindSpeed.rft.xml					Raster function to display the operational impact of wind speed values on parachute operations.
-OpImpactPersonnelHeatIndex.rft.xml					Raster function to display the operational impact of heat index values on personnel.
-OpImpactPersonnelTemperature.rft.xml				Raster function to display the operational impact of temperature values on personnel.
-OpImpactUAVCloudCeiling.rft.xml						Raster function to display the operational impact of cloud ceiling values on UAV operations.
-OpImpactUAVVisibility.rft.xml						Raster function to display the operational impact of visibility values on UAV operations.
-OpImpactUAVWindSpeed.rft.xml						Raster function to display the operational impact of wind speed values on UAV operations.
-TacticalAirliftCloudCeiling.rft.xml					Raster function to display the impact of cloud ceiling values on tactical airlifts.
-TacticalAirliftVisibility.rft.xml					Raster function to display the impact of visibility values on tactical airlifts.
+ 
+| Raster Function | What it does |
+|----- |-----|
+| DeriveHeatIndex.rft.xml | Raster function to calculate Heat Index using Relative Humidity and Temperature. |
+| DeriveWindChillnonuv.rft.xml | Raster function to display windchill but not using u and v components of wind. Uses a single variable for wind speed and single variable for temperature. |
+| DeriveWindChilluv.rft.xml | Raster function to display windchill using u and v components of wind. Uses a single variable for temperature. |
+| ExtractCloudCeiling.rft.xml | Raster function to display cloud ceiling height from data. |
+| ExtractCloudCover.rft.xml | Raster function to display percentage cloud cover from data. |
+| ExtractGust.rft.xml | Raster function to display wind gust derived from u and v values of wind. |
+| ExtractPrecipitationRate.rft.xml | Raster functions to display precipitation rate from data. |
+| ExtractRelativeHumidity.rft.xml | Raster function to display relative humidity from data. |
+| ExtractTemperature.rft.xml | Raster function to display temperature readings from data. |
+| ExtractTemperatureDegC.rft.xml | Raster function to extract temperature from data and change from Degrees Kelvin to Degrees Centigrade. |
+| ExtractVisibility.rft.xml | Raster function to display visibility values from data. |
+| ExtractWindDirection.rft.xml | Raster function to display wind direction using u and v components of wind. |
+| ExtractWindDirectionNonUV.rft.xml | Raster function display wind direction but not using u and v components of wind. Uses a single variable for wind speed. |
+| OpImpactAirDefenseCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on air defense operations. |
+| OpImpactAirDefenseTemperature.rft.xml | Raster function to display the operational impact of temperature values on air defense operations. |
+| OpImpactAirDefenseVisibility.rft.xml | Raster function to display the operational impact of visibility values on air defense operations. |
+| OpImpactAirDefenseWindSpeed.rft.xml | Raster function to display the operational impact of wind speed derived from u and v values on air defense operations. |
+| OpImpactArtilleryCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on artillery operations. |
+| OpImpactArtilleryVisibility.rft.xml | Raster function to display the operational impact of visibility values on artillery operations. |
+| OpImpactArtilleryWindSpeed.rft.xml | Raster function to display the operational impact of wind speed derived from u and v values on artillery operations. |
+| OpImpactBridgeCrossingWindSpeed.rft.xml | Raster function to display the operational impact of wind speed derived from u and v values on bridge crossing. |
+| OpImpactCrossCountryManoevresCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on cross country manoeuvres. |
+| OpImpactCrossCountryManoevresSnowDepth.rft.xml | Raster function to display the operational impact of snow depth values on cross country manoeuvres. |
+| OpImpactCrossCountryManoevresTemperature.rft.xml | Raster function to display the operational impact of temperature values on cross country manoeuvres. |
+| OpImpactCrossCountryManoevresVisibility.rft.xml | Raster function to display the operational impact of visibility values on cross country manoeuvres. |
+| OpImpactCrossCountryManoevresWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values derived from u and v values on cross country manoeuvres. |
+| OpImpactParachuteCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on parachute operations. |
+| OpImpactParachuteWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values on parachute operations. |
+| OpImpactPersonnelHeatIndex.rft.xml | Raster function to display the operational impact of heat index values on personnel. |
+| OpImpactPersonnelTemperature.rft.xml | Raster function to display the operational impact of temperature values on personnel. |
+| OpImpactUAVCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on UAV operations. |
+| OpImpactUAVVisibility.rft.xml | Raster function to display the operational impact of visibility values on UAV operations. |
+| OpImpactUAVWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values on UAV operations. |
+| TacticalAirliftCloudCeiling.rft.xml | Raster function to display the impact of cloud ceiling values on tactical airlifts. |
+| TacticalAirliftVisibility.rft.xml | Raster function to display the impact of visibility values on tactical airlifts. |
 
   * Python Scripts for use within the Raster Functions
 	
 	Python Scripts included and what they do
 
 	All of the scripts need to be checked by the user especially if it is intended to use them with different data as parameters may need to be changed to suit.
+|Python Script Name | What script does |
+|-----|-----| 
+| GustWindSpeedFromUV.py | Python script used by the ExtractGust raster function which uses U and V components of wind. |
+| HeatIndex.py | Python script used by the DeriveHeatIndex raster function. |
+| NAMDownload.py | Python script that automates the download of the most up to date NAM data. |
+| WindChillnonuv.py | Python script used by the DeriveWindChillnonuv raster function for data that does not contain the U and V components of wind. |
+| WindchillUV.py | Python script used by the DeriveWindChilluv raster function for data that does contain the U and V components of wind. | 
+| WindDirectionFromUV.py | Python script used by the WindDirectionFromUV raster function. |
+| WindSpeedFromUV.py | Python script used by the OpImpact wind speed raster functions. |
+
+  * Variables extracted in sample data.
   
-GustWindSpeedFromUV.py	 							Python script used by the ExtractGust raster function which uses U and V components of wind.
-HeatIndex.py	 									Python script used by the DeriveHeatIndex raster function.
-NAMDownload.py										Python script that automates the download of the most up to date NAM data.
-WindChillnonuv.py	 								Python script used by the DeriveWindChillnonuv raster function for data that does not contain the U and V components of wind.
-WindchillUV.py	 									Python script used by the DeriveWindChilluv raster function for data that does contain the U and V components of wind.
-WindDirectionFromUV.py	 							Python script used by the WindDirectionFromUV raster function.
-WindSpeedFromUV.py	 								Python script used by the OpImpact wind speed raster functions.
+    These are 12 of a potential 139 that are available from the NAM CONUS 12km data downloaded from the NOAA site.
+
+| Variable Name | Description |
+| ------ | ----- |	
+| rh2m | Relative Humidity 2m (%) |
+| tcdcclm | Total cloud cover (%) |
+| tmpsfc | Surface Temperature (k) |
+| hgtclb | Cloud Base geopotential height (GPM) |
+| vissfc | Surface Visibility (m) |
+| ugrd10m | u component of wind 10m above ground |
+| vgrd10m | v component of wind 10m above ground |
+| ugrdmwl | Max wind u component (m/s) |
+|vgrdmwl | Max wind v component (m/s) |
+| snodsfc | Snow depth surface (m) |
+| gustsfc | Wind gust surface (m/s) |
+| apcpsfc | surface total precipitation (kg/m2) |
+
 
 
 ## Sections
@@ -91,7 +114,7 @@ WindSpeedFromUV.py	 								Python script used by the OpImpact wind speed raster
 * Download the solutions-raster-functions repo to your local computer.
 * These raster functions are designed to be work with mosaic datasets only and only with NAM data in the OpenDAP format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.  These Raster Functions enable the user to take a multi attribute raster and to display specific attributes from it such as Windspeed, Relative Humidity and Temperature. In addition to this any raster Functions that involves Python Scripts, Python raster Functions, enable the user to create and display a derived variable such as wind chill (calculated by combining Air Temperature and Windspeed).  The functions within this repo are there as a demo to the user and both types can be customized by the user so that they are able to display their own variables.
 * Information on building raster functions can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
-* They have been built with NAM CONUS (12KM) downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
+* They have been built with NAM CONUS (12km) downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
 * All raster functions and scripts should be copied to a folder on a local drive on your computer.
 * For the raster functions that use Python scripts such as DeriveWindChillUV.rft.xml the location of the Python script will have to be changed.  This can be done in 2 ways
 	* It can be edited directly within xml by finding the .py file and changing the location.
