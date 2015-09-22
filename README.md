@@ -1,6 +1,6 @@
 # solutions-raster-functions
 
-Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for use with NAM CONUS 12km data in the OpenDAP format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Examples would be extracting Temperature or Relative Humidity.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. The user can then by inputting parameters make predictions as to the impact these weather conditions may have on Military Operations.  These parameters can be changed to suit not just Military operations but any activity that may be influenced by the weather.
+Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for weather data and are for use with NAM CONUS 12km data in the NetCDF format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Examples would be extracting Temperature or Relative Humidity so that they can be viewed within ArcMAP.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. The user can then by inputting parameters make predictions as to the impact these weather conditions may have on Military Operations.  These parameters can be changed to suit not just Military operations but any activity that may be influenced by the weather.
 
 ![Raster functions graphic](GenericFunctionsGraphic.png)
 
@@ -67,7 +67,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
   * Variables extracted in sample data.
   
-    These are 12 of a potential 139 that are available from the NAM CONUS 12km data downloaded from the NOAA site.
+    These are 12 of a potential 139 that are available from the NAM CONUS 12km data downloaded from the NOAA site.  The sample data supplied covers the area of the state of California in the United States of America.
 
 | Variable Name | Description |
 | ------ | ----- |	
@@ -79,11 +79,17 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 | ugrd10m | u component of wind 10m above ground |
 | vgrd10m | v component of wind 10m above ground |
 | ugrdmwl | Max wind u component (m/s) |
-|vgrdmwl | Max wind v component (m/s) |
+| vgrdmwl | Max wind v component (m/s) |
 | snodsfc | Snow depth surface (m) |
 | gustsfc | Wind gust surface (m/s) |
 | apcpsfc | surface total precipitation (kg/m2) |
 
+  * Sample data
+	
+| File Name | Description |
+| ----- | ----- |
+| nam201509181hr00z.nc | All the above variables for the State of California. |
+| nam201509181hr00zWind.nc |Just U and V components of wind for the State of California. |
 
 
 ## Sections
@@ -99,6 +105,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 * ArcGIS Desktop 10.3 or later
 * ArcGIS Pro v1 or later
+* Multidimension Supplemental Tools for ArcGIS (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938)
 * Pywin build 219 or later or similar ide. (Optional)
 
 ## Instructions
@@ -113,9 +120,9 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ### Getting Started
 
 * Download the solutions-raster-functions repo to your local computer.
-* These raster functions are designed to be work with mosaic datasets only and only with NAM data in the OpenDAP format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.  These Raster Functions enable the user to take a multi attribute raster and to display specific attributes from it such as Windspeed, Relative Humidity and Temperature. In addition to this any raster Functions that involves Python Scripts, Python raster Functions, enable the user to create and display a derived variable such as wind chill (calculated by combining Air Temperature and Windspeed).  The functions within this repo are there as a demo to the user and both types can be customized by the user so that they are able to display their own variables.
+* These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.  These Raster Functions enable the user to take a multi attribute raster and to display specific attributes from it such as Windspeed, Relative Humidity and Temperature. In addition to this any raster functions that involve Python Scripts, Python raster functions, enable the user to create and display a derived variable such as wind chill (calculated by combining Air Temperature and Windspeed).  The functions within this repo are there as a demo to the user and both types can be customized by the user so that they are able to display their own variables.
 * Information on building raster functions can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
-* They have been built with NAM CONUS (12km) downloaded in the OpenDAP format obtained from here (http://nomads.ncep.noaa.gov/)
+* These raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools
 * All raster functions and scripts should be copied to a folder on a local drive on your computer.
 * For the raster functions that use Python scripts such as DeriveWindChillUV.rft.xml the location of the Python script will have to be changed.  This can be done in 2 ways
 	* It can be edited directly within xml by finding the .py file and changing the location.
