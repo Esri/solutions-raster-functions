@@ -14,8 +14,8 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 | Raster Function | What it does |
 |----- |-----|
 | DeriveHeatIndex.rft.xml | Raster function to calculate Heat Index using Relative Humidity and Temperature. |
-| DeriveWindChillnonuv.rft.xml | Raster function to display windchill but not using u and v components of wind. Uses a single variable for wind speed and single variable for temperature. |
-| DeriveWindChilluv.rft.xml | Raster function to display windchill using u and v components of wind. Uses a single variable for temperature. |
+| DeriveWindChillNonUV.rft.xml | Raster function to display windchill but not using u and v components of wind. Uses a single variable for wind speed and single variable for temperature. |
+| DeriveWindChillUV.rft.xml | Raster function to display windchill using u and v components of wind. Uses a single variable for temperature. |
 | ExtractCloudCeiling.rft.xml | Raster function to display cloud ceiling height from data. |
 | ExtractCloudCover.rft.xml | Raster function to display percentage cloud cover from data. |
 | ExtractGust.rft.xml | Raster function to display wind gust derived from u and v values of wind. |
@@ -42,7 +42,8 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 | OpImpactParachuteCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on parachute operations. |
 | OpImpactParachuteWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values on parachute operations. |
 | OpImpactPersonnelHeatIndex.rft.xml | Raster function to display the operational impact of heat index values on personnel. |
-| OpImpactPersonnelTemperature.rft.xml | Raster function to display the operational impact of temperature values on personnel. |
+| OpImpactPersonnelTemp.rft.xml | Raster function to display the operational impact of temperature values on personnel. |
+| OpImpactPersonnelWindChill.rft.xm | Raster function to display the operational impact of wind chill values on personnel.
 | OpImpactUAVCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on UAV operations. |
 | OpImpactUAVVisibility.rft.xml | Raster function to display the operational impact of visibility values on UAV operations. |
 | OpImpactUAVWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values on UAV operations. |
@@ -60,7 +61,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 | GustWindSpeedFromUV.py | Python script used by the ExtractGust raster function which uses U and V components of wind. |
 | HeatIndex.py | Python script used by the DeriveHeatIndex raster function. |
 | NAMDownload.py | Python script that automates the download of the most up to date NAM data. |
-| WindChillnonuv.py | Python script used by the DeriveWindChillnonuv raster function for data that does not contain the U and V components of wind. |
+| WindChillNonUV.py | Python script used by the DeriveWindChillnonuv raster function for data that does not contain the U and V components of wind. |
 | WindchillUV.py | Python script used by the DeriveWindChilluv raster function for data that does contain the U and V components of wind. | 
 | WindDirectionFromUV.py | Python script used by the WindDirectionFromUV raster function. |
 | WindSpeedFromUV.py | Python script used by the OpImpact wind speed raster functions. |
@@ -122,7 +123,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 * Download the solutions-raster-functions repo to your local computer.
 * These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.  These Raster Functions enable the user to take a multi attribute raster and to display specific attributes from it such as Windspeed, Relative Humidity and Temperature. In addition to this any raster functions that involve Python Scripts, Python raster functions, enable the user to create and display a derived variable such as wind chill (calculated by combining Air Temperature and Windspeed).  The functions within this repo are there as a demo to the user and both types can be customized by the user so that they are able to display their own variables.
 * Information on building raster functions can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
-* These raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools
+* These raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools which can be downloaded from here (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938)
 * All raster functions and scripts should be copied to a folder on a local drive on your computer.
 * For the raster functions that use Python scripts such as DeriveWindChillUV.rft.xml the location of the Python script will have to be changed.  This can be done in 2 ways
 	* It can be edited directly within xml by finding the .py file and changing the location.
@@ -133,12 +134,13 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 * With ArcGIS Pro:
 	* The Mosaic dataset needs to be within a database within the databases section.
 	* The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
-	* Under the Image Processing the tab the Raster Functions should be added as Processing templates one by one.
+	* Under the Image Processing tab the Raster Functions should be added as Processing templates one by one.
 	* To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
 
 ## Resources
 
 * [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/community/)
+* {MAoW v2 Template] (http://www.arcgis.com/home/item.html?id=2bd5ab673e5d4374bca6343cc80df414)  - This may be of use as it is fully working example of the above raster functions with sample Map Packages.  Uses all the same functions are as presented in this repo. Also contains more detailed instructions on how the raster functions can be set up and changed to suit the users needs.
 
 ## Issues
 

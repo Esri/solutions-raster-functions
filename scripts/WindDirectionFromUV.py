@@ -1,8 +1,10 @@
 # Name: WindDirectionFromUV
 
-# Description: Python raster function to extract wind direction from u and v components of wind.
+# Description: Python raster function to extract wind direction from u and v components of wind.  It is assumed that the
+# wind direction being fed into this function is the normal meterological convention of the direction the wind is coming
+# from and not the direction it is blowing.
 
-# Date Edited: 24/03/2015
+# Date Edited: 22/09/2015
 
 #----------------------------------------------------------------------------------------------------------------------
 
@@ -47,7 +49,7 @@ class WindDirectionFromUV():
 
     def updateRasterInfo(self, **kwargs):
         kwargs['output_info']['bandCount'] = 1      # output is a single band raster
-        kwargs['output_info']['statistics'] = ({'minimum': 0, 'maximum': 150}, )
+        kwargs['output_info']['statistics'] = ({'minimum': 0, 'maximum': 360}, )
         kwargs['output_info']['histogram'] = ()     # we know nothing about the histogram of the outgoing raster.
         kwargs['output_info']['pixelType'] = 'f4'
         return kwargs
@@ -57,7 +59,19 @@ class WindDirectionFromUV():
         u = np.array(pixelBlocks['u_pixels'], dtype='f4')        
         v = np.array(pixelBlocks['v_pixels'], dtype='f4')
 
-        outBlock = np.degrees (np.arctan2(u, v)) + 180
+        #Getting the UV components of wind into the correct orientation:
+        wind_abs = sqrt(u^2 + v^2)
+        wind_dir_trig_to = atan2(u/wind_abs, v/wind_abs)
+        
+        #Then you must convert this wind vector to the meteorological convention of the direction the wind is coming from:
+        #wind_dir_trig_to_degrees = wind_dir_trig_to * 180/pi
+        
+        #Then you must convert that angle from "trig" coordinates to cardinal coordinates:
+        wind_dir_trig_from_degrees = wind_dir_trig_to_degrees + 180
+    
+        outblock = 90 - wind_dir_trig_from_degrees
+        
+##        outBlock = np.degrees (np.arctan2(u, v)) + 180
         pixelBlocks['output_pixels'] = outBlock.astype(props['pixelType'])
         return pixelBlocks
 

@@ -65,7 +65,7 @@ class GustWindSpeedFromUV():
     def updateKeyMetadata(self, names, bandIndex, **keyMetadata):
         if bandIndex == -1:
             keyMetadata['datatype'] = 'Scientific'
-            keyMetadata['datatype'] = 'WindSpeed'
+            keyMetadata['datatype'] = 'GustSpeed'
         elif bandIndex == 0:
             keyMetadata['wavelengthmin'] = None     # reset inapplicable band-specific key metadata
             keyMetadata['wavelengthmax'] = None

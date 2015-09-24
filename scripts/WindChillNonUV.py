@@ -130,5 +130,5 @@ class Windchill_non_uv():
         elif bandIndex == 0:
             keyMetadata['wavelengthmin'] = None     # reset inapplicable band-specific key metadata
             keyMetadata['wavelengthmax'] = None
-            keyMetadata['bandname'] = 'Winchill'
+            keyMetadata['bandname'] = 'Windchill'
         return keyMetadata
