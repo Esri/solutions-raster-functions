@@ -140,7 +140,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ## Resources
 
 * [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/community/)
-* {MAoW v2 Template] (http://www.arcgis.com/home/item.html?id=2bd5ab673e5d4374bca6343cc80df414)  - This may be of use as it is fully working example of the above raster functions with sample Map Packages.  Uses all the same functions are as presented in this repo. Also contains more detailed instructions on how the raster functions can be set up and changed to suit the users needs.
+* [MAoW v2 Template] (http://www.arcgis.com/home/item.html?id=2bd5ab673e5d4374bca6343cc80df414)  - This may be of use as it is fully working example of the above raster functions with sample Map Packages.  Uses all the same functions are as presented in this repo. Also contains more detailed instructions on how the raster functions can be set up and changed to suit the users needs.
 
 ## Issues
 
