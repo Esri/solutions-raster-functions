@@ -35,7 +35,6 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 | OpImpactArtilleryWindSpeed.rft.xml | Raster function to display the operational impact of wind speed derived from u and v values on artillery operations. |
 | OpImpactBridgeCrossingWindSpeed.rft.xml | Raster function to display the operational impact of wind speed derived from u and v values on bridge crossing. |
 | OpImpactCrossCountryManoevresCloudCeiling.rft.xml | Raster function to display the operational impact of cloud ceiling values on cross country manoeuvres. |
-| OpImpactCrossCountryManoevresSnowDepth.rft.xml | Raster function to display the operational impact of snow depth values on cross country manoeuvres. |
 | OpImpactCrossCountryManoevresTemperature.rft.xml | Raster function to display the operational impact of temperature values on cross country manoeuvres. |
 | OpImpactCrossCountryManoevresVisibility.rft.xml | Raster function to display the operational impact of visibility values on cross country manoeuvres. |
 | OpImpactCrossCountryManoevresWindSpeed.rft.xml | Raster function to display the operational impact of wind speed values derived from u and v values on cross country manoeuvres. |
@@ -120,23 +119,33 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 ### Getting Started
 
-* Download the solutions-raster-functions repo to your local computer.
-* These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated Python scripts will have to be edited.  These Raster Functions enable the user to take a multi attribute raster and to display specific attributes from it such as Windspeed, Relative Humidity and Temperature. In addition to this any raster functions that involve Python Scripts, Python raster functions, enable the user to create and display a derived variable such as wind chill (calculated by combining Air Temperature and Windspeed).  The functions within this repo are there as a demo to the user and both types can be customized by the user so that they are able to display their own variables.
-* Information on building raster functions can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
-* These raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools which can be downloaded from here (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938)
-* All raster functions and scripts should be copied to a folder on a local drive on your computer.
-* For the raster functions that use Python scripts such as DeriveWindChillUV.rft.xml the location of the Python script will have to be changed.  This can be done in 2 ways
-	* It can be edited directly within xml by finding the .py file and changing the location.
-	* It can be edited within ArcGIS through the Raster Function editor and double clicking on Python module name.
-* With ArcGIS Desktop 10.3
-	* Add the raster functions to the mosaic dataset as processing templates.
-	* Add mosaic dataset to project and then apply relevant processing template.
-* With ArcGIS Pro:
-	* The Mosaic dataset needs to be within a database within the databases section.
-	* The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
-	* Under the Image Processing tab the Raster Functions should be added as Processing templates one by one.
-	* To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
+* Download the solutions-raster-functions repo to your local computer and unzip it to a local drive location preferably route of C:
+* Read information on building raster functions which can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions here (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+* Information on how to build / modify raster functions within ArcMAp can be found here (https://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/accessing-the-raster-function-template-editor.htm) and information for ArcGIS Pro can be found here (http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
 
+
+
+* These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated python scripts will have to be edited. 
+* The raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools which can be downloaded from here (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938) For more information on the data downloaded please refer to here (http://nomads.ncep.noaa.gov/txt_descriptions/WRF_NMM_doc.shtml)
+* Raster functions should be applied as follows;
+				* With ArcGIS Desktop 10.3
+					* Add the raster functions to the mosaic dataset as processing templates.
+					* Add mosaic dataset to project and then apply relevant processing template.
+				* With ArcGIS Pro:
+					* The Mosaic dataset needs to be within a database within the databases section.
+					* The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
+					* Under the Image Processing tab the Raster Functions should be added as Processing templates one by one.
+					* To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
+					
+* It is likely that you will want to use your own data and thresholds within these raster functions this can be done as follows;
+				* To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
+				
+				* To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
+				
+				* To use your own data within a Python raster function the .py file has to be edited so the correct names are within the getParameterInfo function. Also within the raster function itself the variable names need to be corrected within the Variable Manager section of the Python Raster Function function.  Within the Function Chain section "Type" needs to be set to Item Group and the "Group Field Name" and "Tag Field Name" need to be set to appropriate values.  For more information on how to make your own Python Raster Functions please refer to (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+
+* For further information on how to set up the test data / raster functions please refer to the Military Aspects of Weather (MAoW) template located here (URL OF MAoW TEMPLATE WHEN AVAILABLE)
+					
 ## Resources
 
 * [ArcGIS Pro](https://pro.arcgis.com/en/pro-app/community/)
