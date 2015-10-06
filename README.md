@@ -120,17 +120,16 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 ### Getting Started
 
 * Download the solutions-raster-functions repo to your local computer and unzip it to a local drive location preferably route of C:
-* Read information on building raster functions which can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions here (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+* Read information on building raster functions which can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
 * Information on how to build / modify raster functions within ArcMAp can be found here (https://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/accessing-the-raster-function-template-editor.htm) and information for ArcGIS Pro can be found here (http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
-
 
 
 * These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated python scripts will have to be edited. 
 * The raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools which can be downloaded from here (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938) For more information on the data downloaded please refer to here (http://nomads.ncep.noaa.gov/txt_descriptions/WRF_NMM_doc.shtml)
 * Raster functions should be applied as follows;
 				* With ArcGIS Desktop 10.3
-					* Add the raster functions to the mosaic dataset as processing templates.
-					* Add mosaic dataset to project and then apply relevant processing template.
+					* Add the raster functions to the mosaic dataset as a processing templates.
+					* Add the mosaic dataset to a project and then apply relevant processing template.
 				* With ArcGIS Pro:
 					* The Mosaic dataset needs to be within a database within the databases section.
 					* The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
