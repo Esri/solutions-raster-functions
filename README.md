@@ -137,11 +137,12 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
         * To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
 					
 * It is likely that you will want to use your own data and thresholds within these raster functions this can be done as follows;
-        * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
 
-        * To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
+    * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
 
-        * To use your own data within a Python raster function the .py file has to be edited so the correct names are within the getParameterInfo function. Also within the raster function itself the variable names need to be corrected within the Variable Manager section of the Python Raster Function function.  Within the Function Chain section "Type" needs to be set to Item Group and the "Group Field Name" and "Tag Field Name" need to be set to appropriate values.  For more information on how to make your own Python Raster Functions please refer to (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+    * To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
+
+    * To use your own data within a Python raster function the .py file has to be edited so the correct names are within the getParameterInfo function. Also within the raster function itself the variable names need to be corrected within the Variable Manager section of the Python Raster Function function.  Within the Function Chain section "Type" needs to be set to Item Group and the "Group Field Name" and "Tag Field Name" need to be set to appropriate values.  For more information on how to make your own Python Raster Functions please refer to (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
 
 * For further information on how to set up the test data / raster functions please refer to the Military Aspects of Weather (MAoW) template located here (URL OF MAoW TEMPLATE WHEN AVAILABLE)
 					
