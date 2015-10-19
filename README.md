@@ -127,21 +127,21 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 * These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated python scripts will have to be edited. 
 * The raster functions have been built with NAM CONUS (12km) downloaded in the OpeNDAP format obtained from here (http://nomads.ncep.noaa.gov/)  and then converted to NetCDF format using the OpeNDAP to NetCDF tool within the Multidimension Supplemental tools which can be downloaded from here (http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938) For more information on the data downloaded please refer to here (http://nomads.ncep.noaa.gov/txt_descriptions/WRF_NMM_doc.shtml)
 * Raster functions should be applied as follows;
-                * With ArcGIS Desktop 10.3
-                    * Add the raster functions to the mosaic dataset as a processing templates.
-                    * Add the mosaic dataset to a project and then apply relevant processing template.
-                * With ArcGIS Pro:
-                    * The Mosaic dataset needs to be within a database within the databases section.
-                    * The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
-                    * Under the Image Processing tab the Raster Functions should be added as Processing templates one by one.
-                    * To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
+    * With ArcGIS Desktop 10.3
+        * Add the raster functions to the mosaic dataset as a processing templates.
+        * Add the mosaic dataset to a project and then apply relevant processing template.
+    * With ArcGIS Pro:
+        * The Mosaic dataset needs to be within a database within the databases section.
+        * The Set Mosaic Dataset Properties geoprocessing tool then needs to be run.
+        * Under the Image Processing tab the Raster Functions should be added as Processing templates one by one.
+        * To run them within ArcGIS Pro 1st select the layer you want apply it to from the table of contents then select Mosaic Layer - Data from the ribbon bar at the top and select the relevant Raster Function from the processing templates drop down.
 					
 * It is likely that you will want to use your own data and thresholds within these raster functions this can be done as follows;
-                * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
+        * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
 
-                 * To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
+        * To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
 
-                 * To use your own data within a Python raster function the .py file has to be edited so the correct names are within the getParameterInfo function. Also within the raster function itself the variable names need to be corrected within the Variable Manager section of the Python Raster Function function.  Within the Function Chain section "Type" needs to be set to Item Group and the "Group Field Name" and "Tag Field Name" need to be set to appropriate values.  For more information on how to make your own Python Raster Functions please refer to (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+        * To use your own data within a Python raster function the .py file has to be edited so the correct names are within the getParameterInfo function. Also within the raster function itself the variable names need to be corrected within the Variable Manager section of the Python Raster Function function.  Within the Function Chain section "Type" needs to be set to Item Group and the "Group Field Name" and "Tag Field Name" need to be set to appropriate values.  For more information on how to make your own Python Raster Functions please refer to (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
 
 * For further information on how to set up the test data / raster functions please refer to the Military Aspects of Weather (MAoW) template located here (URL OF MAoW TEMPLATE WHEN AVAILABLE)
 					
