@@ -121,7 +121,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 * Download the solutions-raster-functions repo to your local computer and unzip it to a local drive location preferably route of C:
 * Read information on building raster functions which can be found  here (https://github.com/Esri/raster-functions/wiki) and here (https://github.com/Esri/raster-functions) and here for Python raster functions (https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
-* Information on how to build / modify raster functions within ArcMAp can be found here (https://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/accessing-the-raster-function-template-editor.htm) and information for ArcGIS Pro can be found here (http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
+* Information on how to build / modify raster functions within ArcMap can be found here (https://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/accessing-the-raster-function-template-editor.htm) and information for ArcGIS Pro can be found here (http://pro.arcgis.com/en/pro-app/help/data/imagery/apply-functions-to-a-dataset.htm)
 
 
 * These raster functions are designed to work with mosaic datasets only and only with NAM data in the NetCDF format.  If the user wants to use other data formats then the raster functions and associated python scripts will have to be edited. 
@@ -138,7 +138,7 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 					
 * It is likely that you will want to use your own data and thresholds within these raster functions this can be done as follows;
 
-    * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more  levels of operational impact for an activity then also open and edit the statistics and histogram function.
+    * To edit the thresholds open the raster function within the raster function editor and change the parameters within the remap function.  If you want to add more levels of operational impact for an activity then also open and edit the statistics and histogram function.
 
     * To use your own data in a standard raster function the Definition Query within the Function Chain will have to edited to suit your data.  The function chain is accessed through the raster function editor.
 
@@ -154,6 +154,8 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 * [Multidimension Supplemental Tools](http://www.arcgis.com/home/item.html?id=9f963f362fe5417f87d44618796db938)
 * [Information on Raster Functions](https://github.com/Esri/raster-functions)
 * [Information on Python Raster Functions](https://github.com/Esri/raster-functions/wiki/PythonRasterFunction)
+* [Modifying raster functions] (https://desktop.arcgis.com/en/desktop/latest/manage-data/raster-and-images/accessing-the-raster-function-template-editor.htm)
+* [Test Data](http://nomads.ncep.noaa.gov/txt_descriptions/WRF_NMM_doc.shtml)
 
 ## Issues
 
