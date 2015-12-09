@@ -50,6 +50,19 @@ Raster functions can be applied to raster datasets and mosaic datasets for fast,
 
 Find a bug or want to request a new function?  Please let us know by submitting an issue.
 
+## Repository Points of Contact
+
+###Repository Owner: [Aidan](https://github.com/abrowning80)
+
+* Merge Pull Requests
+* Creates Releases and Tags
+* Manages Milestones
+* Manages and Assigns Issues
+
+###Secondary: [Matt](https://github.com/mfunk)
+
+* Backup when the Owner is away
+
 ## Contributing
 
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
@@ -73,6 +86,6 @@ limitations under the License.
 A copy of the license is available in the repository's
 [license.txt](license.txt) file.
 
-[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military)
+[](Esri Tags: ArcGIS Defense Intelligence Situational Awareness Military ArcGISSolutions)
 [](Esri Language: Python)
 
