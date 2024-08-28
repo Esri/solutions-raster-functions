@@ -1,5 +1,8 @@
 # solutions-raster-functions
 
+## *This repository is no longer maintained* 
+
+
 Raster functions can be applied to raster datasets and mosaic datasets for fast, accurate analytic capabilities.  The raster functions published within this repo are for weather data and are for use with NAM CONUS 12km data in the NetCDF format which can be obtained from here http://nomads.ncep.noaa.gov/.  The raster functions enable the user to take a multi variable meteorological data raster and extract and display single variables.  Examples would be extracting Temperature or Relative Humidity so that they can be viewed within ArcMAP.  Also included are some Python raster function which utilise Python scripts, which are provided, to calculate derived weather variable such as wind chill and heat index. The user can then by inputting parameters make predictions as to the impact these weather conditions may have on Military Operations.  These parameters can be changed to suit not just Military operations but any activity that may be influenced by the weather.
 
 ![Raster functions graphic](GenericFunctionsGraphic.png)
